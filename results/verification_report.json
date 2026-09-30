@@ -1,0 +1,266 @@
+{
+  "tool": "jacobian_verify.py",
+  "version": "1.0.0",
+  "env": {
+    "python": "3.14.4",
+    "sympy": "1.14.0"
+  },
+  "sources": {
+    "tao_blog": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/",
+    "gao_arxiv": "https://arxiv.org/abs/2608.00222",
+    "gao_html": "https://arxiv.org/html/2608.00222v1"
+  },
+  "maps": [
+    "alpoge",
+    "gao"
+  ],
+  "selftest": {
+    "passed": true,
+    "checks": 22
+  },
+  "results": {
+    "alpoge_F": {
+      "own": {
+        "engine": "own",
+        "factor_p_plus_2gamma": true,
+        "factor_q_plus_gamw": true,
+        "identity_f2_f3": true,
+        "identity_f1_f3sq": true,
+        "identity_f3_gam_x": true,
+        "images": [
+          [
+            "-1/4",
+            "0",
+            "0"
+          ],
+          [
+            "-1/4",
+            "0",
+            "0"
+          ],
+          [
+            "-1/4",
+            "0",
+            "0"
+          ]
+        ],
+        "collision_ok": true,
+        "points_distinct": true,
+        "det": "-2",
+        "det_ok": true,
+        "degrees": [
+          7,
+          6,
+          4
+        ],
+        "degrees_ok": true
+      },
+      "sympy": {
+        "engine": "sympy",
+        "factor_p_plus_2gamma": true,
+        "factor_q_plus_gamw": true,
+        "identity_f2_f3": true,
+        "identity_f1_f3sq": true,
+        "identity_f3_gam_x": true,
+        "images": [
+          [
+            "-1/4",
+            "0",
+            "0"
+          ],
+          [
+            "-1/4",
+            "0",
+            "0"
+          ],
+          [
+            "-1/4",
+            "0",
+            "0"
+          ]
+        ],
+        "collision_ok": true,
+        "points_distinct": true,
+        "det": "-2",
+        "det_ok": true,
+        "degrees": [
+          7,
+          6,
+          4
+        ],
+        "degrees_ok": true
+      },
+      "cross_engine": {
+        "components_equal": true,
+        "component_0_equal": true,
+        "component_1_equal": true,
+        "component_2_equal": true,
+        "det_equal": true
+      }
+    },
+    "gao_G": {
+      "own": {
+        "engine": "own",
+        "factor_p_plus_2gamma": true,
+        "factor_q_plus_gamw": true,
+        "g1_matches_printed": true,
+        "det": "2",
+        "det_ok": true,
+        "degrees": [
+          4,
+          11,
+          12
+        ],
+        "degrees_ok": true
+      },
+      "sympy": {
+        "engine": "sympy",
+        "factor_p_plus_2gamma": true,
+        "factor_q_plus_gamw": true,
+        "route2_g2_cancel_ok": true,
+        "route2_g3_cancel_ok": true,
+        "g1_matches_printed": true,
+        "det": "2",
+        "det_ok": true,
+        "degrees": [
+          4,
+          11,
+          12
+        ],
+        "degrees_ok": true
+      },
+      "cross_engine": {
+        "components_equal": true,
+        "component_0_equal": true,
+        "component_1_equal": true,
+        "component_2_equal": true,
+        "det_equal": true
+      }
+    }
+  },
+  "claims": [
+    {
+      "claim": "alpoge_F: p(w)+2*gamma == gamma*BR2 (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: p(w)+2*gamma == gamma*BR2 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: q(w)+gamma*w == gamma^2*BR3 (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: q(w)+gamma*w == gamma^2*BR3 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: f2*f3 == p+2*gamma (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: f2*f3 == p+2*gamma (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: f1*f3^2 == q+gamma*w (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: f1*f3^2 == q+gamma*w (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: f3 == gamma*x (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: f3 == gamma*x (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: three points collide at (-1/4,0,0) (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: three points collide at (-1/4,0,0) (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: the three points are pairwise distinct",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: det J == -2 (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: det J == -2 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: component degrees == (7, 6, 4) (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: component degrees == (7, 6, 4) (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "alpoge_F: both engines agree term-by-term (components + det)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: p(w)+2*gamma == gamma*BR2 (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: p(w)+2*gamma == gamma*BR2 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: q(w)+gamma*w == gamma^2*BR3 (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: q(w)+gamma*w == gamma^2*BR3 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: g1 matches the printed expansion",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: g1 matches the printed expansion (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: route-2 cancellation reproduces g2/g3 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: det J == 2 (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: det J == 2 (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: component degrees == (4, 11, 12) (own)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: component degrees == (4, 11, 12) (sympy)",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "gao_G: both engines agree term-by-term (components + det)",
+      "status": "VERIFIED"
+    }
+  ],
+  "failures": [],
+  "verdict": "ALL_PINNED_CLAIMS_VERIFIED",
+  "timing_s": 1.939
+}
